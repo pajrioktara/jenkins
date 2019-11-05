@@ -1,0 +1,19 @@
+Host *
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+    LogLevel INFO
+    ServerAliveInterval 120
+    ControlMaster auto
+    #ControlPath ~/.ssh/multiplex/%r@%h:%p
+    ControlPersist 1
+    PubkeyAuthentication yes
+    ForwardAgent no
+
+Host *
+    RemoteForward 52698 localhost:52698
+    user berry
+
+Host *.stargate.id
+    RemoteForward 52698 localhost:52698
+    Hostname %h
+    IdentityFile /Users/xaverius/.ssh/awantunai/olimpus.pem
