@@ -16,4 +16,4 @@ Host *
 Host *.stargate.id
     RemoteForward 52698 localhost:52698
     Hostname %h
-    IdentityFile /Users/xaverius/.ssh/awantunai/olimpus.pem
+    IdentityFile /Users/pajri/.ssh/id_rsa.pub
